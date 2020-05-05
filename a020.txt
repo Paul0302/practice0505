@@ -1,0 +1,129 @@
+import java.util.Scanner;
+
+public class import2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner IDNumber = new Scanner(System.in);
+		//System.out.println("Enter ID NUmber");
+		while(IDNumber.hasNext()) {
+			
+		int Num=0,k=0,kap=0,kap2=0,total=0,count=0;
+		int min=8;
+		int temp[]=new int[9];
+		
+
+		String TW = IDNumber.nextLine();
+		//System.out.println(TW);
+		
+		for(int i=0;i<1;i++) {
+			if(TW.charAt(i)=='A') {
+				Num=Num+10;}
+			if(TW.charAt(i)=='B') {
+				Num=Num+11;}
+			if(TW.charAt(i)=='C') {
+				Num=Num+12;}
+			if(TW.charAt(i)=='D') {
+				Num=Num+13;}
+			if(TW.charAt(i)=='E') {
+				Num=Num+14;}
+			if(TW.charAt(i)=='F') {
+				Num=Num+15;}
+			if(TW.charAt(i)=='G') {
+				Num=Num+16;}
+			if(TW.charAt(i)=='H') {
+				Num=Num+17;}
+			if(TW.charAt(i)=='I') {
+				Num=Num+34;}
+			if(TW.charAt(i)=='J') {
+				Num=Num+18;}
+			if(TW.charAt(i)=='K') {
+				Num=Num+19;}
+			if(TW.charAt(i)=='L') {
+				Num=Num+20;}
+			if(TW.charAt(i)=='M') {
+				Num=Num+21;}
+			if(TW.charAt(i)=='N') {
+				Num=Num+22;}
+			if(TW.charAt(i)=='O') {
+				Num=Num+35;}
+			if(TW.charAt(i)=='P') {
+				Num=Num+23;}
+			if(TW.charAt(i)=='Q') {
+				Num=Num+24;}
+			if(TW.charAt(i)=='R') {
+				Num=Num+25;}
+			if(TW.charAt(i)=='S') {
+				Num=Num+26;}
+			if(TW.charAt(i)=='T') {
+				Num=Num+27;}
+			if(TW.charAt(i)=='U') {
+				Num=Num+28;}
+			if(TW.charAt(i)=='V') {
+				Num=Num+29;}
+			if(TW.charAt(i)=='W') {
+				Num=Num+32;}
+			if(TW.charAt(i)=='X') {
+				Num=Num+30;}
+			if(TW.charAt(i)=='Y') {
+				Num=Num+31;}
+			if(TW.charAt(i)=='Z') {
+				Num=Num+33;}
+		}
+		for(int i=1;i<=9;i++) {
+			if(TW.charAt(i)=='0') {
+				temp[k]=temp[k]+0;
+				k++;
+			}if(TW.charAt(i)=='1') {
+				temp[k]=temp[k]+1;
+				k++;
+			}if(TW.charAt(i)=='2') {
+				temp[k]=temp[k]+2;
+				k++;
+			}if(TW.charAt(i)=='3') {
+				temp[k]=temp[k]+3;
+				k++;
+			}if(TW.charAt(i)=='4') {
+				temp[k]=temp[k]+4;
+				k++;
+			}if(TW.charAt(i)=='5') {
+				temp[k]=temp[k]+5;
+				k++;
+			}if(TW.charAt(i)=='6') {
+				temp[k]=temp[k]+6;
+				k++;
+			}if(TW.charAt(i)=='7') {
+				temp[k]=temp[k]+7;
+				k++;
+			}if(TW.charAt(i)=='8') {
+				temp[k]=temp[k]+8;
+				k++;
+			}
+			if(TW.charAt(i)=='9') {
+				temp[k]=temp[k]+9;
+				k++;
+			}
+		}
+		for(int j=0;j<8;j++) {
+			count=count+temp[j]*min;
+			min--;
+			
+		}
+		count=count+temp[8];
+		kap=Num/10;
+		kap2=(Num%10)*9;
+		total=kap+kap2;
+		total=total+count;
+		if(total%10==0) {
+			System.out.println("real");
+		}
+		else {
+			System.out.println("fake");
+		}
+		//System.out.println(Num);
+		//System.out.println(total);
+		}	
+	}
+
+}
